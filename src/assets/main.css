@@ -10,14 +10,14 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: var(--color1);
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: var(--color2)
   }
 }
 
@@ -32,4 +32,24 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+
+/*********** CUSTOM CODE ***********/
+body #app header {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+body #app header img.logo {
+  margin: unset;
+  max-width: 400px;
+  width: 100%;
+}
+body #app header .wrapper .greetings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
