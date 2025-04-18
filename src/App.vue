@@ -10,6 +10,12 @@ import TheWelcome from './components/TheWelcome.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
+
+    <div class="container mt-5">
+      <h1 class="text-primary">Test: Bootstrap is actief</h1>
+      <button class="btn btn-danger">Klik hier</button>
+  </div>
+
   </header>
 
   <main>
