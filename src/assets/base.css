@@ -159,3 +159,7 @@ i svg {
   display: block !important;
   width: 100%;
 }
+
+#app main.v-main {
+  padding: 140px 0 100px 0;
+}

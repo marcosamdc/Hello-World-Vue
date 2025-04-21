@@ -1,9 +1,11 @@
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <router-view />
 </template>
 
 <script setup>
-// Vuetify-componenten zoals v-app moeten de hele app omhullen
+// Geen extra imports nodig hier
 </script>
+
+<style scoped>
+/* Voeg hier eventueel algemene stijlen toe als je wilt */
+</style>
