@@ -73,7 +73,6 @@ body #app header .wrapper .greetings {
 
 /* ICON DASHBAORD */
 .v-row.v-row--dense {
-  margin-top: 140px;
   align-items: unset !important;
 }
 .v-row.v-row--dense .v-col.v-col-6 .v-card.v-card--link {
