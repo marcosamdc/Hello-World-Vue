@@ -1,29 +1,30 @@
-# hello-world
+# Vue Application - RealEstateCare Prototype
 
-This template should help get you started developing with Vue 3 in Vite.
+Dit project is een prototype van een mobiele inspectieapplicatie voor **RealEstateCare**.  
+De applicatie is gebouwd met **Vue.js 3**, **Vue Router** en **Vuetify** en simuleert een inspectieworkflow voor vastgoedinspecteurs.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Project Functionaliteiten
 
-## Customize configuration
+- Inloggen met gebruikersnaam en wachtwoord (gesimuleerd via localStorage)
+- Dashboard met vier hoofdknoppen: Scheduled, Completed, Knowledge Base, Settings
+- Navigatie via Vue Router
+- Inspectielijst ophalen via externe web API (MyJSONServer)
+    - https://github.com/marcosamdc/db-json
+    - https://my-json-server.typicode.com/marcosamdc/db-json/inspections
+- Weergave van inspecties gesorteerd op datum
+- Detailweergave bij selectie van een inspectie
+- Component-based structuur
+- Mobielvriendelijk en touch-ready interface via Vuetify
+- GitHub-repository: https://github.com/marcosamdc/vue-application
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## Technologieën
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Vue.js 3
+- Vue Router 4
+- Vuetify 3
+- Axios
+- Vite
