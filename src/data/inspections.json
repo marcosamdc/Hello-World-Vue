@@ -1,0 +1,52 @@
+{
+    "inspections": [
+        {
+            "id": 1,
+            "date": "2024-04-26",
+            "location": "Plutostraat 306, 2402 XK Alphen aan den Rijn",
+            "inspector": "Elisangela Maria Duarte",
+            "status": "Voltooid",
+            "remarks": "Geen problemen gevonden."
+        },
+        {
+            "id": 2,
+            "date": "2024-05-10",
+            "location": "Plutostraat 502, 2402 XK Alphen aan den Rijn",
+            "inspector": "Gustavo Rocha Sousa",
+            "status": "Voltooid",
+            "remarks": "Minimale reparatie nodig."
+        },
+        {
+            "id": 3,
+            "date": "2024-06-15",
+            "location": "Iepstraat 14, 2404 EM Alphen aan den Rijn",
+            "inspector": "Chester Meurer",
+            "status": "Gepland",
+            "remarks": "Gepland voor volgende week"
+        },
+        {
+            "id": 4,
+            "date": "2024-07-20",
+            "location": "Koninginneweg 301, 2411XS Bodegraven",
+            "inspector": "Ruskaya Duarte de Castro",
+            "status": "Voltooid",
+            "remarks": "Opvolging vereist voor elektrische problemen."
+        },
+        {
+            "id": 5,
+            "date": "2024-08-30",
+            "location": "Plutostraat 105, 2402 XK Alphen aan den Rijn",
+            "inspector": "Jeroen Verlaan",
+            "status": "Geannuleerd",
+            "remarks": "Inspectie geannuleerd door klant."
+        },
+        {
+            "id": 6,
+            "date": "2024-09-15",
+            "location": "Koninginneweg 250, 2411XS Bodegraven",
+            "inspector": "Lars van Dongen",
+            "status": "In uitvoering",
+            "remarks": "Inspectie gestart, in afwachting van het eindrapport."
+        }
+    ]
+}

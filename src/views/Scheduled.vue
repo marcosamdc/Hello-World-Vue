@@ -4,8 +4,9 @@
       <h1>Scheduled tasks</h1>
       <p>Hier komt een lijst met ingeplande taken.</p>
     </v-container>
-  </template>
-  <script>
+</template>
+
+<script>
   export default {}
-  </script>
+</script>
   
