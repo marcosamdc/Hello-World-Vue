@@ -46,32 +46,32 @@
 </template>
 
 <script>
-import logo from '@/assets/logo-white.png'
+  import logo from '@/assets/logo-white.png'
 
-export default {
-  data() {
-    return {
-      logo
-    }
-  },
-  methods: {
-    goTo(routeName) {
-      this.$router.push({ name: routeName })
+  export default {
+    data() {
+      return {
+        logo
+      }
     },
-    logout() {
-      localStorage.removeItem('loggedIn')      // Verwijder login-token
-      this.$router.push({ name: 'login' })     // Stuur terug naar loginpagina
+    methods: {
+      goTo(routeName) {
+        this.$router.push({ name: routeName })
+      },
+      logout() {
+        localStorage.removeItem('loggedIn')      // Verwijder login-token
+        this.$router.push({ name: 'login' })     // Stuur terug naar loginpagina
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.logo {
-  max-height: 36px;
-}
+  .logo {
+    max-height: 36px;
+  }
 
-.logo-link {
-  text-decoration: none;
-}
+  .logo-link {
+    text-decoration: none;
+  }
 </style>

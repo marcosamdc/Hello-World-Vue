@@ -30,26 +30,27 @@
       </v-col>
     </v-row>
   </v-container>
+
+  <!-- Nieuwe inspectielijst onder de tegels -->
+  <InspectionList />
 </template>
-  
-  <script>
-  import logo from '@/assets/logo-white.png';
-  
+
+<script>
+  import InspectionList from '@/components/InspectionList.vue'
+
   export default {
-    data() {
-      return {
-        logo
-      };
+    components: {
+      InspectionList
     },
     methods: {
       goTo(routeName) {
         this.$router.push({ name: routeName });
       }
     }
-  };
-  </script>
-  
-  <style scoped>
+  }
+</script>
+
+<style scoped>
   .v-main {
     padding: 0;
     margin: 0;
@@ -57,19 +58,19 @@
     background-color: transparent;
     width: 100%;
   }
-  
+
   .fill-container {
     height: calc(100vh - 112px); /* 64px header + 48px bottom-nav */
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .v-row {
     flex: 1;
     align-items: center;
   }
-  
+
   .v-card {
     height: 100%;
     min-height: 120px;
@@ -77,9 +78,4 @@
     flex-direction: column;
     justify-content: center;
   }
-  
-  .logo {
-    max-height: 36px;
-  }
-  </style>
-  
+</style>
