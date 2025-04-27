@@ -21,7 +21,7 @@ De applicatie is gebouwd met **Vue.js 3**, **Vue Router** en **Vuetify** en simu
 
 ---
 
-## Technologieën
+## Applicaties
 
 - Vue.js 3
 - Vue Router 4
