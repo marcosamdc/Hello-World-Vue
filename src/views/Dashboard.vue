@@ -4,28 +4,28 @@
       <v-col cols="6">
         <v-card class="pa-4 text-center" @click="goTo('scheduled')" elevation="2">
           <v-icon size="48">mdi-bookmark-outline</v-icon>
-          <div class="mt-2">Scheduled</div>
+          <div class="mt-2">Gepland</div>
         </v-card>
       </v-col>
 
       <v-col cols="6">
         <v-card class="pa-4 text-center" @click="goTo('completed')" elevation="2">
           <v-icon size="48">mdi-check-circle</v-icon>
-          <div class="mt-2">Completed</div>
+          <div class="mt-2">Voltooid</div>
         </v-card>
       </v-col>
 
       <v-col cols="6">
         <v-card class="pa-4 text-center" @click="goTo('knowledge')" elevation="2">
           <v-icon size="48">mdi-apps</v-icon>
-          <div class="mt-2">Knowledge base</div>
+          <div class="mt-2">Kennisbank</div>
         </v-card>
       </v-col>
 
       <v-col cols="6">
         <v-card class="pa-4 text-center" @click="goTo('settings')" elevation="2">
           <v-icon size="48">mdi-cog</v-icon>
-          <div class="mt-2">Settings</div>
+          <div class="mt-2">Instellingen</div>
         </v-card>
       </v-col>
     </v-row>

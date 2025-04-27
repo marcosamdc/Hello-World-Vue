@@ -3,9 +3,13 @@
 </template>
 
 <script setup>
-// Geen extra imports nodig hier
+import { useInspectionStore } from '@/stores/useInspectionStore'
+
+// Initialiseer inspecties zodra de app start
+const store = useInspectionStore()
+store.initializeInspections()
 </script>
 
 <style scoped>
-/* Voeg hier eventueel algemene stijlen toe als je wilt */
+/* Algemene stijlen kun je hier toevoegen indien gewenst */
 </style>

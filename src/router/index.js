@@ -7,6 +7,10 @@ import Scheduled from '@/views/Scheduled.vue'
 import Completed from '@/views/Completed.vue'
 import Knowledge from '@/views/Knowledge.vue'
 import Settings from '@/views/Settings.vue'
+import InspectionForm from '@/views/InspectionForm.vue' 
+import PlanInspectionForm from '@/views/PlanInspectionForm.vue'
+
+
 import Layout from '@/components/Layout.vue'
 
 const routes = [
@@ -62,6 +66,16 @@ const routes = [
         path: '/info',
         name: 'info',
         component: Settings // of een andere view
+      },
+      {
+        path: '/inspection-form',
+        name: 'inspection-form',
+        component: InspectionForm
+      },
+      {
+        path: '/plan-inspection/:id?',
+        name: 'plan-inspection',
+        component: PlanInspectionForm
       }
     ]
   }
