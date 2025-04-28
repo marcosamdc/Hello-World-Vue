@@ -1,67 +1,66 @@
 <template>
-    <v-container>
-      <h1 class="mb-4">
-        {{ isNew ? 'Nieuwe Inspectie Inplannen' : 'Inspectie Bewerken' }}
-      </h1>
-  
-      <v-form ref="inspectionForm">
-        <v-text-field
-          v-model="form.date"
-          label="Datum"
-          type="date"
-          required
-        ></v-text-field>
-  
-        <v-text-field
-          v-model="form.location"
-          label="Locatie"
-          required
-        ></v-text-field>
-  
-        <v-text-field
-          v-model="form.inspector"
-          label="Inspecteur"
-          required
-        ></v-text-field>
-  
-        <!-- Toegevoegd: Status dropdown -->
-        <v-select
-          v-model="form.status"
-          :items="statusOptions"
-          label="Status"
-          required
-        ></v-select>
-  
-        <v-textarea
-          v-model="form.remarks"
-          label="Opmerkingen"
-          rows="4"
-        ></v-textarea>
-  
-        <v-btn class="mt-4" color="success" @click="saveInspection">
-          Inspectie opslaan
-        </v-btn>
-  
-        <v-btn class="mt-4 ml-4" color="primary" @click="goBack">
-          Terug
-        </v-btn>
-      </v-form>
-    </v-container>
-  </template>
-  
-  <script>
+  <v-container>
+    <h1 class="mb-4">
+      {{ isNew ? 'Nieuwe Inspectie Inplannen' : 'Inspectie Bewerken' }}
+    </h1>
+
+    <v-form ref="inspectionForm">
+      <v-text-field
+        v-model="form.date"
+        label="Datum"
+        type="date"
+        required
+      ></v-text-field>
+
+      <v-text-field
+        v-model="form.location"
+        label="Locatie"
+        required
+      ></v-text-field>
+
+      <v-text-field
+        v-model="form.inspector"
+        label="Inspecteur"
+        required
+      ></v-text-field>
+
+      <v-select
+        v-model="form.status"
+        :items="statusOptions"
+        label="Status"
+        required
+      ></v-select>
+
+      <v-textarea
+        v-model="form.remarks"
+        label="Opmerkingen"
+        rows="4"
+      ></v-textarea>
+
+      <v-btn class="mt-4" color="success" @click="saveInspection">
+        Inspectie opslaan
+      </v-btn>
+
+      <v-btn class="mt-4 ml-4" color="primary" @click="goBack">
+        Terug naar de vorige pagina
+      </v-btn>
+    </v-form>
+  </v-container>
+</template>
+
+<script>
   import { useInspectionStore } from '@/stores/useInspectionStore'
   import { useRoute, useRouter } from 'vue-router'
   import { reactive, onMounted } from 'vue'
-  
+
   export default {
     setup() {
       const store = useInspectionStore()
       const route = useRoute()
       const router = useRouter()
-  
+
       const inspectionId = route.params.id
-  
+
       const form = reactive({
         date: '',
         location: '',
@@ -74,11 +73,11 @@
         modifications: false,
         photo: null
       })
-  
+
       const isNew = inspectionId ? false : true
-  
+
       const statusOptions = ['Gepland', 'Voltooid', 'Geannuleerd', 'In uitvoering']
-  
+
       onMounted(() => {
         if (inspectionId) {
           const existingInspection = store.inspections.find(i => i.id == inspectionId)
@@ -96,7 +95,7 @@
           }
         }
       })
-  
+
       function saveInspection() {
         if (inspectionId) {
           const updatedInspection = {
@@ -109,13 +108,13 @@
           store.addInspection({ ...form })
           alert('Nieuwe inspectie succesvol ingepland.')
         }
-        router.push({ name: 'scheduled' })
+        history.back()
       }
-  
+
       function goBack() {
-        router.push({ name: 'scheduled' })
+        history.back()
       }
-  
+
       return {
         form,
         isNew,
@@ -125,12 +124,11 @@
       }
     }
   }
-  </script>
-  
-  <style scoped>
+</script>
+
+<style scoped>
   .v-form {
     margin: 0 auto;
     max-width: 600px;
   }
-  </style>
-  
+</style>

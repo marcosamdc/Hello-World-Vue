@@ -55,33 +55,33 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      language: 'Nederlands', // 🔥 standaard waarde
-      languages: ['Nederlands', 'Engels', 'Duits'],
-      notifications: false,
-      darkMode: false
-    }
-  },
-  methods: {
-    goToDashboard() {
-      this.$router.push({ name: 'dashboard' })
+  export default {
+    data() {
+      return {
+        language: 'Nederlands', // 🔥 standaard waarde
+        languages: ['Nederlands', 'Engels', 'Duits'],
+        notifications: false,
+        darkMode: false
+      }
     },
-    saveSettings() {
-      alert(`Instellingen opgeslagen:\nTaal: ${this.language}\nMeldingen: ${this.notifications ? 'Aan' : 'Uit'}\nDonkere modus: ${this.darkMode ? 'Aan' : 'Uit'}`)
+    methods: {
+      goToDashboard() {
+        this.$router.push({ name: 'dashboard' })
+      },
+      saveSettings() {
+        alert(`Instellingen opgeslagen:\nTaal: ${this.language}\nMeldingen: ${this.notifications ? 'Aan' : 'Uit'}\nDonkere modus: ${this.darkMode ? 'Aan' : 'Uit'}`)
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.hoverable {
-  transition: box-shadow 0.3s, background-color 0.3s;
-  cursor: pointer;
-}
+  .hoverable {
+    transition: box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
 
-.hoverable:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
+  .hoverable:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
 </style>
