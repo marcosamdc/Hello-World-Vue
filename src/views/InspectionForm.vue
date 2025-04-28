@@ -169,7 +169,6 @@
 <style scoped>
   .v-form {
     margin: 0 auto;
-    max-width: 600px;
   }
 
   .report-view {
@@ -186,5 +185,9 @@
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+  .v-btn.bg-primary {
+    margin-left: unset !important;
   }
 </style>
