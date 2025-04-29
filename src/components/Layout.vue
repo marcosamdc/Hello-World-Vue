@@ -80,12 +80,12 @@
 
     <!-- FOOTER (blijft hetzelfde) -->
     <v-bottom-navigation app color="primary" grow>
-      <v-btn @click="goTo('active-task')">
+      <v-btn @click="goTo('active-tasks')">
         <v-icon>mdi-wrench</v-icon>
         <span>Actieve inspecties</span>
       </v-btn>
 
-      <v-btn @click="goTo('search')">
+      <v-btn @click="goTo('all-inspections')">
         <v-icon>mdi-magnify</v-icon>
         <span>Alle inspecties</span>
       </v-btn>
