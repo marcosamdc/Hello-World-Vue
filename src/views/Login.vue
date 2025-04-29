@@ -43,6 +43,8 @@
   button.v-btn {
     background-color: var(--color1) !important;
     transition: .2s ease-in-out;
+    border: unset;
+    color: var(--color3) !important;
   }
   button.v-btn * {
     font-weight: bold !important;

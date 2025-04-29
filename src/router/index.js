@@ -7,6 +7,12 @@ import Scheduled from '@/views/Scheduled.vue'
 import Completed from '@/views/Completed.vue'
 import Knowledge from '@/views/Knowledge.vue'
 import Settings from '@/views/Settings.vue'
+import InspectionForm from '@/views/InspectionForm.vue' 
+import PlanInspectionForm from '@/views/PlanInspectionForm.vue'
+import ActiveTasksView from '@/views/ActiveTasksView.vue'
+import AllInspectionsView from '@/views/AllInspectionsView.vue'
+import InfoView from '@/views/InfoView.vue'
+
 import Layout from '@/components/Layout.vue'
 
 const routes = [
@@ -49,19 +55,29 @@ const routes = [
         component: Settings
       },
       {
-        path: '/active-task',
-        name: 'active-task',
-        component: Scheduled // of een andere view indien gewenst
+        path: '/active-tasks',
+        name: 'active-tasks',
+        component: ActiveTasksView
       },
       {
-        path: '/search',
-        name: 'search',
-        component: Knowledge // of een andere view
+        path: '/all-inspections',
+        name: 'all-inspections',
+        component: AllInspectionsView
       },
       {
         path: '/info',
         name: 'info',
-        component: Settings // of een andere view
+        component: InfoView
+      },
+      {
+        path: '/inspection-form/:id',
+        name: 'inspection-form',
+        component: InspectionForm
+      },
+      {
+        path: '/plan-inspection/:id?',
+        name: 'plan-inspection',
+        component: PlanInspectionForm
       }
     ]
   }
