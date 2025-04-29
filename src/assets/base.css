@@ -276,7 +276,8 @@ button.v-btn.v-btn--slim:nth-child(2):hover {
 }
 
 /* CARD TITLES */
-.v-card-title {
+.v-card-title,
+.v-card-subtitle.text-caption {
   white-space: unset !important;
 }
 
