@@ -55,10 +55,10 @@
         <v-list-item link @click="navigate('/completed')">
           <v-list-item-title>Voltooide Inspecties</v-list-item-title>
         </v-list-item>
-        <v-list-item link @click="navigate('/active-task')">
+        <v-list-item link @click="navigate('/active-tasks')">
           <v-list-item-title>Actieve Inspecties</v-list-item-title>
         </v-list-item>
-        <v-list-item link @click="navigate('/search')">
+        <v-list-item link @click="navigate('/all-inspections')">
           <v-list-item-title>Alle Inspecties</v-list-item-title>
         </v-list-item>
         <v-list-item link @click="navigate('/knowledge')">
