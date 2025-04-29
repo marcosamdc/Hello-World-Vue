@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <h1 class="mb-4">Voltooide Inspecties</h1>
+    <h1 class="mb-4">Alle Inspecties</h1>
 
     <v-row dense>
       <v-col
-        v-for="inspection in completedInspections"
+        v-for="inspection in allInspections"
         :key="inspection.id"
         cols="12"
       >
@@ -22,8 +22,12 @@
           </v-card-subtitle>
 
           <v-card-actions class="pt-2">
-            <v-btn color="primary" @click.stop="goToInspectionForm(inspection)">Inspectierapport bekijken</v-btn>
-            <v-btn color="info" @click.stop="goToEditInspection(inspection)">Inspectie bewerken</v-btn>
+            <v-btn color="success" @click.stop="goToInspectionForm(inspection)">
+              Inspectierapport invullen/bekijken
+            </v-btn>
+            <v-btn color="info" @click.stop="goToEditInspection(inspection)">
+              Inspectie bewerken
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -43,64 +47,68 @@
     </v-btn>
   </v-container>
 </template>
-
+  
 <script>
   import { useInspectionStore } from '@/stores/useInspectionStore'
-  import { computed } from 'vue'
-
+  import { computed, ref } from 'vue'
+  
   export default {
     setup() {
       const store = useInspectionStore()
-
-      const completedInspections = computed(() => {
-        return store.inspections.filter(inspection => inspection.status === 'Voltooid')
+      const selectedInspection = ref(null)
+  
+      const allInspections = computed(() => {
+        return store.inspections
       })
-
-      return {
-        store,
-        completedInspections
+  
+      function goToDashboard() {
+        window.location.href = '/dashboard'
       }
-    },
-    data() {
-      return {
-        selectedInspection: null
+  
+      function goToInspectionForm(inspection) {
+        window.location.href = `/inspection-form/${inspection.id}`
       }
-    },
-    methods: {
-      goToDashboard() {
-        this.$router.push({ name: 'dashboard' })
-      },
-      goToInspectionForm(inspection) {
-        this.$router.push({ name: 'inspection-form', params: { id: inspection.id } })
-      },
-      goToEditInspection(inspection) {
-        this.$router.push({ name: 'plan-inspection', params: { id: inspection.id } })
-      },
-      selectInspection(inspection) {
-        this.selectedInspection = inspection
-      },
-      formatDate(date) {
+  
+      function goToEditInspection(inspection) {
+        window.location.href = `/plan-inspection/${inspection.id}`
+      }
+  
+      function selectInspection(inspection) {
+        selectedInspection.value = inspection
+      }
+  
+      function formatDate(date) {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('nl-NL', options)
+      }
+  
+      return {
+        allInspections,
+        selectedInspection,
+        goToDashboard,
+        goToInspectionForm,
+        goToEditInspection,
+        selectInspection,
+        formatDate
       }
     }
   }
 </script>
-
+  
 <style scoped>
   .hoverable {
     transition: box-shadow 0.3s, background-color 0.3s;
     cursor: pointer;
   }
-
+  
   .hoverable:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
-
+  
   .active {
     background-color: var(--color3);
   }
-
+  
   .details {
     background-color: var(--color3);
     padding: 20px;
@@ -108,3 +116,4 @@
     margin-top: 20px;
   }
 </style>
+  

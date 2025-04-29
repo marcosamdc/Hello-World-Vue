@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h2 class="mb-4">Completed Inspections</h2>
+        <h2 class="mb-4">Alle inspecties</h2>
     
         <v-row dense>
             <v-col
@@ -25,12 +25,12 @@
         </v-row>
   
         <div v-if="selectedInspection" class="details mt-6">
-            <h3>Inspection Details</h3>
-            <p><strong>Date:</strong> {{ selectedInspection.date }}</p>
-            <p><strong>Location:</strong> {{ selectedInspection.location }}</p>
-            <p><strong>Inspector:</strong> {{ selectedInspection.inspector }}</p>
+            <h3>Inspectiedetails</h3>
+            <p><strong>Datum:</strong> {{ selectedInspection.date }}</p>
+            <p><strong>Locatie:</strong> {{ selectedInspection.location }}</p>
+            <p><strong>Inspecteur:</strong> {{ selectedInspection.inspector }}</p>
             <p><strong>Status:</strong> {{ selectedInspection.status }}</p>
-            <p><strong>Remarks:</strong> {{ selectedInspection.remarks }}</p>
+            <p><strong>Opmerkingen:</strong> {{ selectedInspection.remarks }}</p>
         </div>
     </v-container>
 </template>
